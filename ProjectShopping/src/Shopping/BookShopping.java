@@ -137,10 +137,13 @@ public class BookShopping {
 			    	  System.out.println(ShoppingBookList[BookShoppingNumber-1].BookName);
 			    	  System.out.println(ShoppingBookList[BookShoppingNumber-1].BookCost);
 			    	  //장바구니에 책 넣기
+			    	  //BookList el : ShoppingBookBasket
+			    	  int index = 0;
 			    	  for(BookList el : ShoppingBookBasket) {
 			    		  if(el == null) {
 			    			  el = ShoppingBookList[BookShoppingNumber-1]; 
 			    			  System.out.println(el);
+			    			  index++;
 			    			  break; 
 			    			  
 			    		  }else {
@@ -189,9 +192,6 @@ public class BookShopping {
 		  else if(shoppingChoiceNumber ==2) {
 			  System.out.println("--------------장바구니페이지--------------");
 	    	  //책들 정보
-			  for(BookList el : ShoppingBookBasket) {
-				  System.out.println(el);
-			  }
 			  for(BookList el : ShoppingBookBasket) {
 				  if(el !=null) {
 					  System.out.println(el);
